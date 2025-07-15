@@ -7,12 +7,12 @@
       win_regedit:
         path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         name: legalnoticecaption
-        data: "Hello Redux"
+        data: "$Heading"
         type: string
 
     - name: Set Interactive logon message text
       win_regedit:
         path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
         name: legalnoticetext
-        data: "This system is for Redux users only"
+        data: "$discription"
         type: string
