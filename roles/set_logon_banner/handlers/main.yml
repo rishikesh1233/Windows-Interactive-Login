@@ -1,0 +1,5 @@
+---
+- name: Reboot Windows
+  win_reboot:
+    reboot_timeout: 600
+    msg: "System is restarting after logon banner update."

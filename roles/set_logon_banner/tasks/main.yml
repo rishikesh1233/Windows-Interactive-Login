@@ -1,0 +1,19 @@
+---
+- name: Set Interactive logon message title
+  win_regedit:
+    path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+    name: legalnoticecaption
+    data: "{{ heading }}"
+    type: string
+  notify: Reboot Windows
+
+- name: Set Interactive logon message text
+  win_regedit:
+    path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+    name: legalnoticetext
+    data: "{{ description }}"
+    type: string
+  notify: Reboot Windows
+
+
+

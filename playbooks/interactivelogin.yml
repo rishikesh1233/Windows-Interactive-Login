@@ -1,0 +1,9 @@
+---
+- name: Set Windows Interactive Logon Banner
+  hosts: windows
+  gather_facts: false
+  vars_files:
+    - ../vars/logon_banner.yml
+  roles:
+    - set_logon_banner
+
